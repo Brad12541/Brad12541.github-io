@@ -1,0 +1,96 @@
+.revista {
+    width: 90%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.contenido {
+    width: 100%; /* Ancho total del contenedor */
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: row; /* Coloca la imagen y el texto en fila */
+    justify-content: center; /* Centra verticalmente los elementos */
+    align-items: center; /* Centra horizontalmente los elementos */
+    margin-bottom: 20px; /* Espacio entre cada sección */
+}
+
+.contenido .imagen_revista {
+    flex: 1; /* La imagen ocupa el 50% del ancho */
+    max-width: 100%; /* Máximo ancho del 50% */
+    overflow: hidden; /* Evita que la imagen se desborde */
+    text-align: center;
+    padding: 20px; /* Espacio interior para la imagen */
+}
+.imagen_revista img{
+    max-width: 400px;
+}
+
+.contenido .texto {
+    flex: 1; /* El texto ocupa el otro 50% del ancho */
+    padding: 20px;
+    text-align: center;
+}
+
+.contenido .texto a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block; /* Convierte el enlace en un bloque para ocupar el espacio disponible */
+    margin-bottom: 10px;
+}
+
+.contenido .texto p {
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .contenido {
+        flex-direction: column; /* Cambia la dirección a columna en dispositivos pequeños */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .contenido .imagen_revista,
+    .contenido .texto {
+        max-width: 100%; /* Asegura que ambos ocupen el 100% del ancho */
+        width: 100%;
+    }
+
+    .contenido .imagen_revista img {
+        width: 100%; /* Ajusta el tamaño de la imagen en dispositivos pequeños */
+        margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
+}
+
+@media (max-width: 600px) {
+    .contenido .imagen_revista {
+        width: 100%; /* Asegura que el contenedor de la imagen ocupe el 100% del ancho */
+        text-align: center; /* Centra el contenido de la imagen */
+    }
+    .contenido .imagen_revista{
+        width: 120%; /* Aumenta el tamaño de la imagen en móviles */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
+
+    .contenido .texto {
+        padding: 10px; /* Reduce el padding en móviles */
+    }
+
+    .contenido .texto h2 {
+        font-size: 1.2em; /* Reduce el tamaño del título en móviles */
+    }
+
+    .contenido .texto p {
+        font-size: 1em; /* Reduce el tamaño del párrafo en móviles */
+    }
+}

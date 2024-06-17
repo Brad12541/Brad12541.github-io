@@ -1,0 +1,79 @@
+/* Estilos para el contenedor de la sección */
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinear al inicio verticalmente */
+    padding: 20px;
+    width: 90%;
+    max-width: 1600px; /* Ancho máximo del contenedor */
+    margin: auto;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+    background-color: #ffffff; /* Color de fondo del contenido */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 50px; /* Ajuste el margen inferior para mover el elemento más abajo */
+    overflow: hidden; /* Evita que la sombra se salga del contenedor */
+}
+
+/* Estilos para el contenido de la sección */
+.section-content {
+    flex: 1 1 60%; /* Ocupar inicialmente el 60% del espacio */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+    max-width: 100%; /* Ancho máximo del contenido */
+}
+
+/* Estilos para el título */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto */
+.section-text {
+    font-size: 16px;
+    color: #666; /* Color del texto */
+    line-height: 1.5; /* Altura de línea */
+}
+
+/* Estilos para la imagen */
+.section-image {
+    flex: 1 1 40%; /* Ocupar inicialmente el 40% del espacio */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática */
+    display: block; /* Hacer que la imagen sea un bloque para controlar el margen */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.section-image img:hover {
+    transform: scale(1.1); /* Escalar la imagen ligeramente al hacer hover */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Cambiar la disposición a una columna */
+    .section-container {
+        flex-direction: column;
+    }
+
+    /* Alinear el contenido al centro en dispositivos móviles */
+    .section-content,
+    .section-image {
+        text-align: center;
+        padding: 10px; /* Ajuste de padding en dispositivos móviles */
+        max-width: 100%; /* Ancho máximo completo en dispositivos móviles */
+        flex: 1 1 100%; /* Ocupar todo el ancho en dispositivos móviles */
+    }
+}

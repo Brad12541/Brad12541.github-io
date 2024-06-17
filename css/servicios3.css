@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.creative-cards {
+    padding: 80px 0; /* Ajuste el padding superior e inferior */
+    position: relative;
+}
+
+.creative-cards .container {
+    max-width: 1000px; /* Reduje el máximo ancho del contenedor */
+    margin: 0 auto;
+    padding: 0 15px; /* Añade padding a los lados del contenedor */
+}
+
+.creative-cards .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye las tarjetas uniformemente */
+    margin-bottom: -30px; /* Compensación por el margen inferior de las tarjetas */
+}
+
+.creative-cards .container .row .card-column {
+    flex: 0 0 calc(30% - 15px); /* Ancho inicial para tres columnas en dispositivos de pantalla ancha */
+    max-width: calc(30% - 15px);
+    margin-bottom: 30px; /* Espacio inferior entre tarjetas */
+    text-align: center;
+}
+
+/* Media Query para pantallas medianas */
+@media (max-width: 1115px) and (min-width: 1017px) {
+    .creative-cards .container {
+        max-width: 900px; /* Reducir el máximo ancho del contenedor */
+        padding: 0 15px; /* Añadir padding a los lados del contenedor */
+    }
+
+    .creative-cards .container .row .card-column {
+        flex: 0 0 calc(40% - 20px); /* Dos columnas por fila en pantallas medianas */
+        max-width: calc(40% - 20px);
+        margin-bottom: 25px; /* Espacio inferior entre tarjetas */
+    }
+}
+
+/* Media Query para pantallas medianas */
+@media (max-width: 1016px) {
+    .creative-cards .container {
+        max-width: 900px; /* Reducir el máximo ancho del contenedor */
+        padding: 0 15px; /* Añadir padding a los lados del contenedor */
+    }
+
+    .creative-cards .container .row .card-column {
+        flex: 0 0 calc(45% - 20px); /* Dos columnas por fila en tabletas */
+        max-width: calc(45% - 20px);
+        margin-bottom: 25px; /* Espacio inferior entre tarjetas */
+    }
+}
+
+/* Media Query para tabletas */
+@media (max-width: 960px) {
+    .creative-cards .container {
+        max-width: 700px; /* Reduje el máximo ancho del contenedor */
+        padding: 0 15px; /* Añade padding a los lados del contenedor */
+    }
+
+    .creative-cards .container .row .card-column {
+        flex: 0 0 calc(45% - 20px); /* Dos columnas por fila en tabletas */
+        max-width: calc(45% - 20px);
+        margin-bottom: 25px; /* Espacio inferior entre tarjetas */
+    }
+}
+
+/* Media Query para teléfonos móviles */
+@media (max-width: 768px) {
+    .creative-cards .container {
+        max-width: 300px; /* Reduje el máximo ancho del contenedor */
+        padding: 0 10px; /* Ajuste de padding más estrecho para teléfonos */
+    }
+
+    .creative-cards .container .row .card-column {
+        flex: 0 0 100%; /* Una columna por fila en teléfonos */
+        max-width: 100%;
+        margin-bottom: 30px; /* Espacio inferior entre tarjetas */
+    }
+
+    .card-details {
+        padding: 15px; /* Reducción adicional del padding en dispositivos móviles */
+    }
+}
+
+/* Media Query para teléfonos móviles pequeños */
+@media (max-width: 508px) {
+    .creative-cards .container {
+        max-width: 250px; /* Reduje el máximo ancho del contenedor */
+        padding: 0 5px; /* Ajuste de padding más estrecho para teléfonos pequeños */
+    }
+}
+
+.card-details {
+    position: relative;
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde suave */
+    padding: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.card-details:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #cdcbe0; /* Color azul principal */
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-20deg, 0deg);
+    transition: background-color 0.3s ease;
+}
+
+.card-details:hover:before {
+    background-color: #bbb5ee; /* Color azul más claro al hacer hover */
+}
+
+.card-icons {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 1; /* Ajustar z-index para estar delante de otros elementos */
+}
+
+.card-icons:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Fondo blanco */
+    border: 1px solid #0a0044; /* Borde azul */
+    transform: skew(-20deg, 0deg);
+    transition: background-color 0.3s ease;
+    z-index: -1;
+}
+
+.card-details:hover .card-icons:before {
+    background-color: #464791; /* Borde azul más oscuro al hacer hover */
+}
+
+.card-icons img {
+    width: 75%; /* Ajustar el ancho al 100% para que se ajuste al contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Otros estilos */
+.card-details {
+    position: relative;
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde suave */
+    padding: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.card-details:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #cdcbe0; /* Color azul principal */
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skew(-20deg, 0deg);
+    transition: background-color 0.3s ease;
+}
+
+.card-details:hover:before {
+    background-color: #bbb5ee; /* Color azul más claro al hacer hover */
+}
+
+.card-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-details h3 a {
+    color: #000;
+    text-decoration: none;
+}
+
+.card-details p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #4a53d8;
+    color: #4a53d8;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #4a53d8; /* Color azul al hacer hover */
+    color: #fff; /* Texto blanco al hacer hover */
+}

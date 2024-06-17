@@ -1,0 +1,68 @@
+.animado-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.animado-section-item {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.animado-content {
+    text-align: center;
+}
+.animado-boton {
+    text-align: center;
+}
+
+.animado-boton h6 {
+    font-size: 1.2rem;
+    color: #141936;
+}
+
+.animado-boton p {
+    color: #333;
+}
+
+.animado-boton p,
+.animado-boton h6 {
+    margin: 5px 0;
+}
+
+.animado-imagen {
+    width: 100px;
+    height: 100px;
+}
+
+@media (min-width: 560px) and (max-width: 991px) {
+    .animado-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Centra los elementos en tablet */
+    }
+
+    .animado-section-item {
+        flex: 0 1 calc(33.33% - 20px); /* Ajusta el ancho de los elementos */
+        margin-bottom: 20px;
+    }
+
+    .animado-section-item:nth-child(4) {
+        margin-right: auto; /* Mueve el cuarto elemento al centro */
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .animado-section {
+        width: 100%;
+        padding: 0 10px; /* Añade un poco de espacio a los lados */
+    }
+
+    .animado-section-item {
+        flex: 0 1 calc(100% - 20px);
+    }
+}

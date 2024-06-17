@@ -1,0 +1,63 @@
+.top-menu {
+    background-color: #1a2042 !important;
+    color: #fff;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu .logo h2 {
+    font-size: 12px;
+    padding-left: 1rem;
+}
+
+.social-links {
+    margin-right: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 20px !important;
+    text-decoration: none;
+}
+.fa-facebook{
+    color: #ffffff;
+}
+.fa-tiktok{
+    color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+    .top-menu .logo {
+        display: block;
+    }
+    .social-links {
+        text-align: center;
+    }
+    .social-links a {
+        display: inline-block; /* Asegura que los iconos se muestren en línea */
+        margin: 0 10px; /* Espacio entre los iconos */
+    }
+}
+
+@media (max-width: 767px) {
+    .top-menu .logo {
+        display: none;
+    }
+    .social-links {
+        padding-left: 4px;
+        text-align: center;
+        width: 100%; /* Asegura que los enlaces ocupen todo el ancho disponible */
+    }
+    .social-links a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 24px;
+        text-decoration: none;
+    }
+}
+
+

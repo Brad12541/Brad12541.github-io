@@ -1,0 +1,36 @@
+.contenido-seccion { /* Ruta de la imagen de fondo */
+    border-radius: 25px;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    padding: 50px 0; /* Ajusta el espaciado según sea necesario */
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 50px 0; /* Ajusta el espaciado según sea necesario */
+}
+/* Estilos para el texto */
+.texto-acerca-de {
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7); /* Color oscuro con una opacidad del 70% */
+    color: #fff; /* Color de texto blanco para que contraste */
+    padding: 20px; /* Ajusta el espaciado según sea necesario */
+    width: 90%; /* Para que el fondo ocupe todo el ancho del contenedor */
+    height: auto; /* Para que el fondo ocupe todo el alto del contenedor */
+    box-sizing: border-box;
+}
+
+
+/* Estilos adicionales para asegurar responsividad */
+@media (max-width: 992px) {
+    .contenido-seccion {
+        width: 80%;
+    }
+    .texto-acerca-de{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido-seccion {
+        width: 80%;
+    }
+}

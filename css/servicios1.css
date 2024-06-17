@@ -1,0 +1,56 @@
+.servicios_titulo{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .buttons a {
+    text-decoration: none;
+  }
+  button.neumorphic {
+    container-type: inline-size;
+    aspect-ratio: 1/1;
+    border: 0.5rem solid transparent;
+    border-radius: 1rem;
+    color: hsl(0 0% 10%);
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 10rem; /* Tamaño medio ajustable */
+    height: 10rem; /* Tamaño medio ajustable */
+    --shadow: 
+      -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+      .5rem .5rem 1rem hsl(0 0% 50% / .5);
+    box-shadow: var(--shadow);
+    outline: none;  
+    transition: all 0.1s;
+  }
+  button.neumorphic:hover, 
+  button.neumorphic:focus-visible {
+    color: hsl(236, 84%, 29%);
+    transform: scale(1.1);
+  }
+  button.neumorphic:active, 
+  button.neumorphic.active {
+    box-shadow:
+      var(--shadow),
+      inset .5rem .5rem 1rem hsl(0 0% 50% / .5),
+      inset -.5rem -.5rem 1rem hsl(0 0% 100% / .75);
+    color: hsl(236, 84%, 29%);
+  }
+  button.neumorphic > img {
+    max-width: 70%; /* Ajustar el tamaño máximo de la imagen */
+  }
+  button.neumorphic > span {
+    font-family: system-ui, sans-serif;
+    font-size: 16px; /* Tamaño de fuente ajustable */
+  }
+  

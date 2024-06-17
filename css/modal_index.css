@@ -1,0 +1,53 @@
+/* Estilo para la imagen dentro del modal */
+.modal-imagen {
+    max-width: 100%; /* La imagen ocupa como máximo el ancho del contenedor modal */
+    height: auto; /* Ajusta automáticamente la altura de la imagen para mantener la proporción */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente dentro del modal */
+    overflow: hidden; /* Evita que la imagen se desborde del contenedor */
+}
+
+/* Estilo para el contenedor del modal */
+.modal-dialog {
+    width: 100%; /* Ancho del modal ajustado */
+    max-width: 90%; /* Ancho máximo del modal reducido para pantallas pequeñas */
+    margin: auto; /* Centra el modal horizontalmente */
+}
+
+/* Estilo para el contenido del modal */
+.modal-content {
+    width: 100%; /* El contenido del modal ocupa el 100% del ancho disponible */
+}
+
+/* Estilo para el cuerpo del modal */
+.modal-body {
+    max-height: calc(90vh - 120px); /* Altura máxima del cuerpo del modal ajustada */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido excede la altura máxima */
+}
+
+/* Estilo para el iframe dentro del modal (PDF) */
+.modal-body iframe {
+    width: 100%; /* El iframe ocupa el 100% del ancho del contenedor modal */
+    height: 100%; /* El iframe ocupa el 100% de la altura del contenedor modal */
+    border: none; /* Elimina el borde del iframe para un mejor aspecto */
+}
+
+/* Estilo para la tabla */
+.table {
+    width: 100%; /* La tabla ocupa el 100% del ancho disponible */
+    border-collapse: collapse; /* Colapsa los bordes de las celdas de la tabla */
+}
+
+/* Estilo para las filas de la tabla al pasar el cursor */
+.table tbody tr:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor al pasar sobre las filas */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%; /* Ancho máximo ajustado para pantallas pequeñas */
+        margin: auto; /* Centra el modal horizontalmente */
+    }
+}

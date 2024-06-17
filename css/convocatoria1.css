@@ -1,0 +1,89 @@
+.convocatorias_generales{
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo_seccion{
+    font-size: 1.5em;
+    background-color: #1a2042;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.convocatorias {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.convocatoria {
+    flex: 1;
+    min-width: 300px;
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.titulo {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.button_container {
+    margin-top: 10px;
+}
+
+.btn {
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 10px 20px;
+    margin: 5px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    text-decoration: none;
+}
+
+.btn i {
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 700%;
+    width: 180%;
+    background: #78c7d2;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}

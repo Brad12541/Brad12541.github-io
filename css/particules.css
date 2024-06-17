@@ -1,0 +1,25 @@
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #141936; /* Fondo oscuro */
+}
+
+.portada {
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.carousel, .carousel-inner, .carousel-item, .slide-content, .texto {
+    position: relative;
+    z-index: 2;
+}
+
+.slide-content {
+    background: none; /* Elimina el fondo si no quieres imágenes fijas detrás de las partículas */
+}
+
+.animate__animated {
+    z-index: 3; /* Asegura que las animaciones estén por encima del fondo de partículas */
+}

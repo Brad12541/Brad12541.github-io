@@ -1,0 +1,122 @@
+/* Estilos para los tabs y botones */
+.nav-tabs {
+    border: none; /* Sin borde */
+    background-color: transparent; /* Fondo transparente */
+    justify-content: flex-start; /* Alinear los tabs a la izquierda */
+    margin-bottom: 20px; /* Margen inferior */
+    perspective: 1000px; /* Perspectiva para efectos 3D */
+}
+
+.nav-tabs .nav-link {
+    color: #333; /* Color del texto por defecto */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    border-bottom: 3px solid transparent; /* Borde inferior transparente */
+    border-radius: 0; /* Borde sin redondear */
+    padding: 10px 20px; /* Espacio interno */
+    margin-right: 10px; /* Espacio entre los tabs */
+    position: relative; /* Posición relativa */
+    transition: all 0.3s ease; /* Transición suave */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    display: flex; /* Hacer que el contenido sea flexible */
+    align-items: center; /* Alinear elementos al centro verticalmente */
+    transform-style: preserve-3d; /* Estilo de transformación 3D */
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff !important; /* Color del texto activo */
+    background-color: #1a2042 !important; /* Fondo azul para el tab activo */
+    border-bottom: 3px solid rgb(7, 49, 94) !important; /* Borde inferior activo */
+}
+
+/* Efectos 3D para los tabs */
+.nav-tabs .nav-link {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.nav-tabs .nav-link.active {
+    transform: rotateY(360deg);
+}
+
+/* Animación al cambiar de tabs */
+.nav-tabs .nav-item {
+    animation: fadeIn 0.5s ease; /* Animación de entrada al cambiar de tab */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el ícono de carpeta */
+.folder-icon i {
+    margin-right: 5px; /* Margen derecho del ícono */
+}
+
+/* Estilos para los paneles de los tabs */
+.tab-pane {
+    display: none; /* Por defecto, ocultar los paneles */
+    padding: 20px; /* Espaciado interno */
+    opacity: 0; /* Opacidad inicial */
+    transition: opacity 0.5s ease; /* Transición de opacidad */
+}
+
+/* Mostrar el panel activo */
+.tab-pane.active {
+    display: block; /* Mostrar el panel activo */
+    opacity: 1; /* Cambiar la opacidad al 100% */
+    animation: fadeInUp 0.5s ease; /* Animación al mostrar */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    background-color: #f8f9fa; /* Color de fondo del cuerpo */
+}
+
+.border {
+    border: 1px solid #dee2e6; /* Borde delgado */
+    border-radius: 10px; /* Borde redondeado */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.titulo {
+    color: #333; /* Color del título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.image-container img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 70%; /* Reducir el tamaño de la imagen en dispositivos móviles */
+    }
+}

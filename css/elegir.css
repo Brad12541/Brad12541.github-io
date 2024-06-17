@@ -1,0 +1,100 @@
+.additional-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.feature-item {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item .feature-item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+.feature-item .feature-item-icon img {
+    max-width: 100%;
+    max-height: 100%; /* Ajustar la altura máxima de la imagen */
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover .feature-item-icon img {
+    transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5; /* Aumentar el espacio entre líneas de texto */
+}
+
+.feature-item p:hover {
+    animation: rubberBand 0.8s;
+}
+/* Estilos para la sección de características principales */
+.features-section {
+    background-color: #f0f0f0; /* Color de fondo estético */
+    padding: 50px 0; /* Espacio alrededor del contenido */
+    text-align: center; /* Centrar el contenido */
+}
+
+.features-section .main-feature {
+    max-width: 95%; /* Ancho máximo del contenido */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Utilizar un diseño de cuadrícula flexible */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espacio interno del contenido */
+    background-color: #ffffff; /* Color de fondo del contenido */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.features-section .main-feature:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+}
+
+.features-section .main-feature h2 {
+    margin-bottom: 10px; /* Espacio inferior para separar el título del párrafo */
+    cursor: pointer; /* Cambiar el cursor al hacer hover */
+    color: #333; /* Color del texto */
+}
+
+.features-section .main-feature h2:hover {
+    animation: bounce 0.8s; /* Animación 'bounce' al hacer hover */
+}
+
+.features-section .main-feature-parrafo {
+    font-size: 16px; /* Tamaño de fuente del texto */
+    line-height: 1.6; /* Altura de línea para una mejor legibilidad */
+    cursor: pointer; /* Cambiar el cursor al hacer hover */
+    color: #555; /* Color del texto */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+.features-section .main-feature-parrafo:hover {
+    color: #24384e; /* Cambio de color al hacer hover */
+    animation: pulse 0.8s; /* Animación 'pulse' al hacer hover */
+}

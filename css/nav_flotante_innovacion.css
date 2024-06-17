@@ -1,0 +1,50 @@
+.nav-flotante {
+    position: fixed;
+    top: 480px; /* Manteniendo la posición original */
+    left: 92%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 160px; /* Limitando el ancho máximo */
+    width: 100%; /* Asegura que el elemento ocupe todo el ancho disponible */
+}
+.nav-flotante ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-flotante ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-flotante ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+.nav-flotante ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-flotante ul li a:hover {
+    color: #979696;
+}
+@media screen and (max-width: 280px) {
+    .nav-flotante {
+        top: 480px;
+        left: 90%;
+    }
+}
+@media screen and (min-width: 2500px) {
+    .nav-flotante {
+        top: 480px;
+        left: 78%;
+    }
+}
